@@ -7,7 +7,8 @@
 
 class ProxycollectPipeline(object):
     def open_spider(self, spider):
-        self.file = open('updated_proxy.txt', 'w')
+        filename=spider.output_name
+        self.file = open(filename, 'w')
 
     def close_spider(self, spider):
         self.file.close()
